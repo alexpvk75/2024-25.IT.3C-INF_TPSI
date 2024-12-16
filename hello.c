@@ -74,7 +74,7 @@ int main() {
         int Labirinto2 = AND(OR(NOT(C), C), OR(NOT(D), D));
         int Labirinto3 = AND(OR(NOT(E), E), OR(NOT(F), F));
         int Labirinto = OR(AND(Labirinto1, Labirinto2), Labirinto3);
-        printf("Il valore di uscita della funzione Labirinto è: %d\n", Labirinto);
+        printf("Il valore di uscita della funzione 'Labirinto' è: %d\n", Labirinto);
     }
 
     printf("\n\n");
