@@ -71,23 +71,11 @@ int main() {
     } else {
         // Procediamo con l'esecuzione solo se il numero è 1 o 0
         printf("I valori inseriti sono 1 o 0\n");
-
-        // Esempio di porta NOT
-        printf("Il valore di A viene trasformato da una porta NOT\n");
-        int notA = NOT(A);
-        printf("Il valore di uscita della porta NOT è: %d\n", notA);
-
-        // Esempio di porta AND
-        printf("I valori di A e B vengono trasformati da una porta AND\n");
-        int andAB = AND(A, B);
-        printf("Il valore di uscita della porta AND è: %d\n", andAB);
-
-        // Esempio di porta OR
-        printf("I valori di A e B vengono trasformati da una porta OR\n");
-        int orAB = OR(A, B);
-        printf("Il valore di uscita della porta OR è: %d\n", orAB);
-        int Bonus = NOT(AND(A, OR(A, B)));
-        printf("Il valore di uscita della funzione NOT(AND(A, OR(A, B))) è: %d\n", Bonus);
+        int Labirinto1 = AND(OR(NOT(A), A), OR(NOT(B), B));
+        int Labirinto2 = AND(OR(NOT(C), C), OR(NOT(D), D));
+        int Labirinto3 = AND(OR(NOT(E), E), OR(NOT(F), F));
+        int Labirinto = OR(AND(Labirinto1, Labirinto2), Labirinto3);
+        printf("Il valore di uscita della funzione NOT(AND(A, OR(A, B))) è: %d\n", Labirinto);
     }
 
     printf("\n\n");
